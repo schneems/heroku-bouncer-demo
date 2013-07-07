@@ -1,0 +1,15 @@
+<h2>Heroku Bouncer Demo</h2>
+<p>
+  Checkout the readme: <a href="https://www.github.com/schneems/heroku-bouncer-demo">Heroku Bouncer Demo</a>
+<h3>Your apps:</h3>
+<ul>
+  <% @apps.each do |app| %>
+    <li>
+      <a href="/app/<%= app["name"] %>">
+        <%= app['name'] %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+From: <a href="http://twitter.com/schneems">@schneems</a>
