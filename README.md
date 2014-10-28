@@ -44,10 +44,6 @@ COOKIE_SECRET=asdf..
 $ foreman start
 ```
 
-## Online Demo
-
-For an online demo visit: [heroku-bouncer-demo.herokuapp.com](http://heroku-bouncer-demo.herokuapp.com).
-
 ## Thanks
 
 To [dominic](https://github.com/dominic) and the [log2viz](https://github.com/heroku/log2viz) project for some good code.
