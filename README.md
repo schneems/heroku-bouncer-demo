@@ -34,7 +34,7 @@ When registering the client you get an OAuth client id and secret. Add these as 
 ```ruby
 HEROKU_OAUTH_ID=asdf...
 HEROKU_OAUTH_SECRET=asdf...
-COOKIE_SECRET=asdf..
+HEROKU_BOUNCER_SECRET=asdf..
 ```
 
 
