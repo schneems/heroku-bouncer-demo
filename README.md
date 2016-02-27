@@ -29,12 +29,13 @@ Next you need to set up your OAuth:
 
 This project uses OAuth to obtain authorization to fetch your application’s logs using the Heroku API. To make this work, you have to register an OAuth client with Heroku. The easiest way to do this is on your [account page on the Heroku Dashboard](https://dashboard.heroku.com/account). Enter `http://localhost:5000/auth/heroku/callback` when prompted for a callback URL. The [OAuth developer doc](devcenter.heroku.com/articles/oauth?preview=1) has additional details on client creation and OAuth in general.
 
-When registering the client you get an OAuth client id and secret. Add these as `HEROKU_OAUTH_ID` and `HEROKU_OAUTH_SECRET` environment variables to your application’s `.env`.
+When registering the client you get an OAuth client id and secret. Add these as `HEROKU_OAUTH_ID` and `HEROKU_OAUTH_SECRET` environment variables to your application’s `.env`. You will also need two randomly generated values, `HEROKU_BOUNCER_SECRET` and `COOKIE_SECRET`.
 
 ```ruby
 HEROKU_OAUTH_ID=asdf...
 HEROKU_OAUTH_SECRET=asdf...
 HEROKU_BOUNCER_SECRET=asdf..
+COOKIE_SECRET=asdf...
 ```
 
 
