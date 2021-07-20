@@ -1,12 +1,14 @@
 <h2>Heroku Bouncer Demo</h2>
 <p>
-  Checkout the readme: <a href="https://www.github.com/schneems/heroku-bouncer-demo">Heroku Bouncer Demo</a>
+  Check out the <a href="https://www.github.com/schneems/heroku-bouncer-demo">README</a>
+  | <a href="/auth/logout">Logout</a>
+</p>
 <h3>Your apps:</h3>
 <ul>
   <% @apps.each do |app| %>
     <li>
       <a href="/app/<%= app["name"] %>">
-        <%= app['name'] %>
+        <%= app["name"] %>
       </a>
     </li>
   <% end %>
