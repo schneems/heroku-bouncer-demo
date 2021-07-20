@@ -46,6 +46,14 @@ HEROKU_BOUNCER_SECRET=asdf...
 COOKIE_SECRET=asdf...
 ```
 
+#### Generating a secret
+
+You can generate a secret locally via
+
+```console
+bundle exec rake secret
+```
+
 ## Start the Server
 
 ```console
