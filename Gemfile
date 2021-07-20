@@ -1,10 +1,12 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.0.0'
+ruby "2.7.4"
 
-gem 'heroku-bouncer'
-gem 'heroku-api'
+gem "dotenv"
+gem "heroku-bouncer"
+gem "platform-api"
+gem "pry-byebug"
 
-gem 'sinatra'
-gem 'sinatra-contrib'
-gem 'puma'
+gem "sinatra"
+gem "sinatra-contrib"
+gem "puma"
