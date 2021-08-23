@@ -17,8 +17,12 @@ class App < Sinatra::Base
       halt(404)
     end
 
+    def authenticated?
+      !!request.env["bouncer.token"]
+    end
+
     def heroku_api
-      halt(401) unless request.env["bouncer.token"]
+      halt(401) unless authenticated?
       PlatformAPI.connect_oauth(request.env["bouncer.token"])
     end
 
@@ -39,5 +43,13 @@ class App < Sinatra::Base
     @app = app(params[:id])
     @app[:log_url] = log_url(params[:id])
     erb :app
+  end
+
+  get "/login" do
+    redirect to("/") if authenticated?
+
+    erb(:"demo-login", locals: {
+      authenticity_token: request.env["rack.session"]["csrf"]
+    })
   end
 end
